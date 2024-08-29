@@ -33,7 +33,7 @@ const ChatHeader = () => {
               </Avatar>
             ) : (
               <div
-                className={` bg-[#ffffff22] py-3 px-5 flex items-center justify-center rounded-full`}
+                className={` bg-[#ab74c1] py-3 px-5 flex items-center justify-center rounded-full`}
               >
                 #
               </div>

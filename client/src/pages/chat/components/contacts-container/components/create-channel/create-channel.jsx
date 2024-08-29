@@ -76,13 +76,14 @@ const CreateChannel = () => {
         <DialogDescription className="hidden">
           Please insert details
         </DialogDescription>
-        <DialogContent className="bg-[#181920] border-none text-white w-[400px] h-max flex flex-col">
+        <DialogContent className="bg-[#33183a] border-none text-white w-[400px] h-max flex flex-col">
           <DialogHeader>
             <DialogTitle>Create a new Channel</DialogTitle>
           </DialogHeader>
           <div>
             <Input
               placeholder="Channel Name"
+              style={{ outline: 'none', boxShadow: 'none' }}
               className="rounded-lg py-6 px-4 bg-[#2c2e3b] border-none"
               value={channelName}
               onChange={(e) => setChannelName(e.target.value)}

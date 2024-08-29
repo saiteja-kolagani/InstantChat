@@ -68,17 +68,18 @@ const NewDM = () => {
       </TooltipProvider>
 
       <Dialog open={openNewContactModal} onOpenChange={setOpenNewContactModal}>
-        <DialogContent className="bg-[#181920] border-none text-white w-[400px] h-[400px] flex flex-col">
+        <DialogContent className="bg-[#33183a] border-none text-white w-[400px] h-[400px] flex flex-col">
           <DialogDescription className="hidden">
             Please select a contact
           </DialogDescription>
           <DialogHeader>
-            <DialogTitle>Select a contact from Syncronus</DialogTitle>
+            <DialogTitle>Select a contact from <span className="text-[#ab74c1]">InstantChat</span></DialogTitle>
           </DialogHeader>
           <div>
             <Input
               placeholder="Search Contacts"
               className="rounded-lg p-6 bg-[#2c2e3b] border-none"
+              style={{ outline: 'none', boxShadow: 'none' }}
               onChange={(e) => searchContacts(e.target.value)}
             />
           </div>
@@ -134,9 +135,9 @@ const NewDM = () => {
                   />
                   <div className="text-opacity-80 text-white  flex flex-col gap-5 items-center mt-5 lg:text-2xl text-xl transition-all duration-1000 text-center">
                     <h3 className="poppins-medium">
-                      Hi
-                      <span className="text-purple-500">!</span> Search new
-                      <span className="text-purple-500"> Contact. </span>
+                      Hello
+                      <span className="text-[#ab74c1]">!</span> Find a new
+                      <span className="text-[#ab74c1]"> Contact. </span>
                     </h3>
                   </div>
                 </div>

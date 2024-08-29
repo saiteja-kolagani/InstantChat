@@ -15,7 +15,7 @@ import CreateChannel from "./components/create-channel/create-channel";
 const ContactsContainer = () => {
   const {
     setDirectMessagesContacts,
-    directMessagesContacts,
+    directMessagesContacts, 
     channels,
     setChannels,
   } = useAppStore();

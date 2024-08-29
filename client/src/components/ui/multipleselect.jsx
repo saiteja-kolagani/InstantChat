@@ -253,6 +253,7 @@ const MultipleSelector = React.forwardRef(
         filter={commandFilter()}
       >
         <div
+          style={{ outline: 'none', boxShadow: 'none' }}
           className={cn(
             "min-h-10 rounded-md border border-input text-sm ring-offset-background focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2",
             {

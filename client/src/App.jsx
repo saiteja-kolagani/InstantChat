@@ -5,12 +5,15 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import { ThreeDots } from 'react-loader-spinner';
 import Profile from "@/pages/profile";
 import Chat from "@/pages/chat";
 import Auth from "@/pages/auth";
 import apiClient from "@/lib/api-client";
 import { GET_USERINFO_ROUTE } from "@/lib/constants";
 import { useAppStore } from "@/store";
+
+import './App.css'
 
 const PrivateRoute = ({ children }) => {
   const { userInfo } = useAppStore();
@@ -54,7 +57,9 @@ function App() {
   }, [userInfo, setUserInfo]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loader-container">
+    <ThreeDots color="#470052" height={50} width={50} />
+  </div>;
   }
 
   return (

@@ -8,11 +8,14 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 import { useAppStore } from "@/store";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import './index.css'
 
 const Auth = () => {
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const { setUserInfo } = useAppStore();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -123,14 +126,22 @@ const Auth = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                <div className="relative">
                 <Input
                   placeholder="Password"
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   style={{ outline: 'none', boxShadow: 'none' }}
                   className="rounded-full p-6"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
+                <div
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </div>
+                </div>
                 <Button className="rounded-full p-6 credentials-btn" onClick={handleLogin}>
                   Sign In
                 </Button>
@@ -144,14 +155,21 @@ const Auth = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                <div className="relative">
                 <Input
                   placeholder="Password"
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   style={{ outline: 'none', boxShadow: 'none' }}
                   className="rounded-full p-6"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
+                <div
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                  onClick={() => setShowPassword(!showPassword)}
+                >{showPassword ? <FaEyeSlash /> : <FaEye />}
+                </div>
+                </div>
                 <Input
                   placeholder="Confirm Password"
                   type="password"
