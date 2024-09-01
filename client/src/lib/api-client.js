@@ -8,7 +8,7 @@ const apiClient = axios.create({
 
 apiClient.interceptors.request.use(
   (config) => {
-    const token = Cookies.get("access-token");
+    const token = Cookies.get("jwt");
 
     if (
       token &&

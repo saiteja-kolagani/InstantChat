@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+console.log(process.env.JWT_KEY);
+
 export const verifyToken = (req, res, next) => {
   const token = req.cookies.jwt;
   if (!token) return res.status(401).send("You are not authenticated!");
