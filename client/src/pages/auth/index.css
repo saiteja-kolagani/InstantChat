@@ -22,6 +22,7 @@
 .credentials-btn {
     background-color: #33183a !important;
     color: #faf7fc !important;
+    transition: 1s !important;
 }
 
 .credentials-btn:hover{
@@ -33,6 +34,7 @@
 
 .login-image {
     filter: drop-shadow(30px 10px 4px #33183a);
+    transition: 1s;
 }
 
 .login-image:hover {
