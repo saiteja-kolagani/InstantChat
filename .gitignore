@@ -23,4 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+server/.env
+
+client/.env 
+
 server/uploads
