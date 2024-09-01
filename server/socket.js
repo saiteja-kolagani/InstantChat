@@ -1,6 +1,9 @@
 import { Server as SocketIOServer } from "socket.io";
 import Message from "./model/MessagesModel.js";
 import Channel from "./model/ChannelModel.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const setupSocket = (server) => {
   const io = new SocketIOServer(server, {
